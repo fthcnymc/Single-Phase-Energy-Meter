@@ -1,0 +1,238 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 6234D92F
+P 5800 3500
+F 0 "A1" H 5800 2411 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5800 2320 50  0001 C CNN
+F 2 "Module:Arduino_Nano" H 5800 3500 50  0001 C CIN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5800 3500 50  0001 C CNN
+	1    5800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6235377E
+P 3750 3250
+F 0 "R1" V 3543 3250 50  0000 C CNN
+F 1 "1MOhm" V 3634 3250 50  0000 C CNN
+F 2 "" V 3680 3250 50  0001 C CNN
+F 3 "~" H 3750 3250 50  0001 C CNN
+	1    3750 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6235894F
+P 4100 3500
+F 0 "R2" H 4030 3454 50  0000 R CNN
+F 1 "1K" H 4030 3545 50  0000 R CNN
+F 2 "" V 4030 3500 50  0001 C CNN
+F 3 "~" H 4100 3500 50  0001 C CNN
+	1    4100 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3900 3250 4100 3250
+Wire Wire Line
+	4100 3250 4100 3350
+Text GLabel 4200 3250 2    50   Input ~ 0
+V_measured
+Text GLabel 6450 3500 2    50   Input ~ 0
+V_measured
+Wire Wire Line
+	6450 3500 6300 3500
+Wire Wire Line
+	4200 3250 4100 3250
+Connection ~ 4100 3250
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 6236E21D
+P 2700 3250
+F 0 "J1" H 2808 3339 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2808 3340 50  0001 C CNN
+F 2 "" H 2700 3250 50  0001 C CNN
+F 3 "~" H 2700 3250 50  0001 C CNN
+	1    2700 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 3250 3250 3250
+Wire Wire Line
+	2900 3350 2900 3800
+Wire Wire Line
+	2900 3800 3250 3800
+Wire Wire Line
+	4100 3800 4100 3650
+Text GLabel 3250 3100 1    50   Input ~ 0
+L
+Wire Wire Line
+	3250 3100 3250 3250
+Connection ~ 3250 3250
+Wire Wire Line
+	3250 3250 3600 3250
+Text GLabel 3250 3650 1    50   Input ~ 0
+N
+Wire Wire Line
+	3250 3650 3250 3800
+Connection ~ 3250 3800
+Wire Wire Line
+	3250 3800 4100 3800
+$Comp
+L Converter_ACDC:HLK-PM01 PS1
+U 1 1 6237B7A1
+P 3350 2400
+F 0 "PS1" H 3350 2725 50  0000 C CNN
+F 1 "HLK-PM01" H 3350 2634 50  0000 C CNN
+F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 3350 2100 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 3750 2050 50  0001 C CNN
+	1    3350 2400
+	1    0    0    -1  
+$EndComp
+Text GLabel 2750 2300 0    50   Input ~ 0
+L
+Text GLabel 2750 2500 0    50   Input ~ 0
+N
+Wire Wire Line
+	2950 2300 2750 2300
+Wire Wire Line
+	2950 2500 2750 2500
+Text GLabel 3900 2300 2    50   Input ~ 0
+Vcc
+Wire Wire Line
+	3900 2300 3750 2300
+Wire Wire Line
+	3750 2500 4050 2500
+Text GLabel 5000 2000 0    50   Input ~ 0
+Vcc
+$Comp
+L Device:C C1
+U 1 1 623A2D98
+P 5150 2250
+F 0 "C1" H 5265 2250 50  0000 L CNN
+F 1 "100nF" H 5265 2205 50  0001 L CNN
+F 2 "" H 5188 2100 50  0001 C CNN
+F 3 "~" H 5150 2250 50  0001 C CNN
+	1    5150 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2100 5150 2000
+Wire Wire Line
+	5150 2000 5000 2000
+$Comp
+L power:GND #PWR01
+U 1 1 623AFD9B
+P 4050 2600
+F 0 "#PWR01" H 4050 2350 50  0001 C CNN
+F 1 "GND" H 4055 2427 50  0000 C CNN
+F 2 "" H 4050 2600 50  0001 C CNN
+F 3 "" H 4050 2600 50  0001 C CNN
+	1    4050 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 2500 4050 2600
+$Comp
+L power:GND #PWR02
+U 1 1 623B3A20
+P 5150 2550
+F 0 "#PWR02" H 5150 2300 50  0001 C CNN
+F 1 "GND" H 5155 2377 50  0000 C CNN
+F 2 "" H 5150 2550 50  0001 C CNN
+F 3 "" H 5150 2550 50  0001 C CNN
+	1    5150 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2400 5150 2550
+$Comp
+L power:GND #PWR03
+U 1 1 623B4808
+P 5900 4650
+F 0 "#PWR03" H 5900 4400 50  0001 C CNN
+F 1 "GND" H 5905 4477 50  0000 C CNN
+F 2 "" H 5900 4650 50  0001 C CNN
+F 3 "" H 5900 4650 50  0001 C CNN
+	1    5900 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 4650 5900 4550
+Wire Wire Line
+	5800 4500 5800 4550
+Wire Wire Line
+	5800 4550 5900 4550
+Connection ~ 5900 4550
+Wire Wire Line
+	5900 4550 5900 4500
+Wire Wire Line
+	5150 2000 5700 2000
+Wire Wire Line
+	5700 2000 5700 2500
+Connection ~ 5150 2000
+$Comp
+L Device:R R3
+U 1 1 623BEFEE
+P 6550 2300
+F 0 "R3" H 6620 2346 50  0000 L CNN
+F 1 "10K" H 6620 2255 50  0000 L CNN
+F 2 "" V 6480 2300 50  0001 C CNN
+F 3 "~" H 6550 2300 50  0001 C CNN
+	1    6550 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 623BF869
+P 6550 2750
+F 0 "R4" H 6620 2796 50  0000 L CNN
+F 1 "10K" H 6620 2705 50  0000 L CNN
+F 2 "" V 6480 2750 50  0001 C CNN
+F 3 "~" H 6550 2750 50  0001 C CNN
+	1    6550 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2450 6550 2500
+$Comp
+L power:GND #PWR04
+U 1 1 623C2368
+P 6550 3000
+F 0 "#PWR04" H 6550 2750 50  0001 C CNN
+F 1 "GND" H 6555 2827 50  0000 C CNN
+F 2 "" H 6550 3000 50  0001 C CNN
+F 3 "" H 6550 3000 50  0001 C CNN
+	1    6550 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 2900 6550 3000
+Text GLabel 6750 2500 2    50   Input ~ 0
+DC_OFFSET
+Wire Wire Line
+	6750 2500 6550 2500
+Connection ~ 6550 2500
+Wire Wire Line
+	6550 2500 6550 2600
+Wire Wire Line
+	6000 2500 6000 2000
+Wire Wire Line
+	6000 2000 6550 2000
+Wire Wire Line
+	6550 2000 6550 2150
+$EndSCHEMATC
